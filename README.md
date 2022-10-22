@@ -60,67 +60,67 @@ Sebelum melakukan deploy aplikasi pastikan Anda sudah memiliki atau sudah mengin
 
 Dibawah ini merupakan langkah - langkah untuk deploy aplikasi menggunakan Heroku.
 
-1. Login ke dalam Heroku
+- Login ke dalam Heroku
 
    ```sh
    heroku login
    ```
 
-2. Install HTTP Server untuk Python
+- Install HTTP Server untuk Python
 
    ```sh
    pip install gunicorn
    ```
 
-3. Buat Procfile untuk menentukan perintah yang dijalankan pertama kali di Heroku
+- Buat Procfile untuk menentukan perintah yang dijalankan pertama kali di Heroku
 
    ```sh
    touch Procfile
    ```
 
-4. Tambahkan keterangan aplikasi di Procfile
+- Tambahkan keterangan aplikasi di Procfile
 
    ```sh
    web: gunicorn app:app
    ```
 
-5. Buat requirements yang akan digunakan di Heroku
+- Buat requirements yang akan digunakan di Heroku
 
    ```sh
    pip freeze > requirements.txt
    ```
 
-6. Hapus library/package yang tidak digunakan
+- Hapus library/package yang tidak digunakan
 
-7. Buat repository
+- Buat repository
 
    ```sh
    git init
    ```
 
-8. Tambahkan file ke repository
+- Tambahkan file ke repository
 
    ```sh
    git add .
    ```
 
-9. Simpan perubahan
+- Simpan perubahan
 
    ```sh
    git commit -m "Initial Commit"
    ```
 
-10. Login to Heroku
+- Login to Heroku
 
-11. Create new app
+- Create new app
 
-12. Lakukan remote ke applikasi Heroku
+- Lakukan remote ke applikasi Heroku
 
    ```sh
    heroku git:remote -a [app_name]
    ```
 
-13. Push ke aplikasi Heroku
+- Push ke aplikasi Heroku
 
    ```sh
    git push heroku master
