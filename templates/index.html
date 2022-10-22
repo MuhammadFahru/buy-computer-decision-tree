@@ -28,19 +28,29 @@
         .c-pointer {
             cursor: pointer;
         }
+
+        .logo {
+            width: 5%;
+        }
+
+        @media (max-width: 576px) {
+            .logo {
+                width: 15%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <center class="mt-5" data-aos="fade-down">
-            <img src="https://i.ibb.co/f49tsXT/logo.png" alt="Logo UPI" width="5%">
+            <img src="https://i.ibb.co/f49tsXT/logo.png" alt="Logo UPI" class="logo">
             <h3 class="ms-3 mt-3">Buy Computer Prediction</h3>
             <p>This application is made with <a href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank">Flask</a> to predict <a href="https://www.kaggle.com/datasets/usman27/buy-computer" target="_blank">Buy Computer Dataset</a> using Decision Tree Algorithm</p>
             {% if predicted  %}
                 <a href="/" class="btn btn-primary mt-3 c-pointer"><i class="fas fa-redo-alt me-3"></i>Reset Prediction</a>
             {% endif %}
         </center>
-        <div class="card shadow mt-5 mb-5 ms-5 me-5" data-aos="flip-up">
+        <div class="card shadow mt-5 mb-5 ms-3 me-3" data-aos="flip-up">
             <div class="card-body p-5">
                 {% if predicted  %}
                     <h4 class="mb-3"><b>Data Testing</b></h4>
@@ -77,9 +87,9 @@
                     <hr class="mt-2 mb-4">
                     <h4 class="mb-3"><b>Prediction Result</b></h4>
                     {% if "Yes" in predicted  %}
-                        <h5><span class="badge bg-success w-100 p-3">Buy Computer : {{ predicted }} <i class="ms-1 fas fa-check"></i></span></h5>
+                        <h5><span class="badge bg-success w-100 p-3">Buy Computer : {{ predicted }} <i class="fas fa-check"></i></span></h5>
                     {% else %}
-                        <h5><span class="badge bg-danger w-100 p-3">Buy Computer : {{ predicted }} <i class="ms-1 fas fa-times"></i></span></h5>
+                        <h5><span class="badge bg-danger w-100 p-3">Buy Computer : {{ predicted }} <i class="fas fa-times"></i></span></h5>
                     {% endif %}
                 {% else %}
                     <form action="{{ url_for('prediction') }}" method="POST">
