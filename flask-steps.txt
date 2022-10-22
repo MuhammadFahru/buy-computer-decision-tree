@@ -1,8 +1,0 @@
-1. pip install virtualenv
-2. virtualenv [env_name]
-3. [env_name]\Scripts\activate
-4. pip install Flask
-5. pip3 install -U scikit-learn scipy matplotlib pandas
-6. set FLASK_APP=app.py
-7. flask run
-8. deactivate
