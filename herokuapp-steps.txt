@@ -1,0 +1,5 @@
+1. git init
+2. git add .
+3. git commit -m "Msg"
+4. pip install gunicorn
+5. pip freeze > requirements.txt
